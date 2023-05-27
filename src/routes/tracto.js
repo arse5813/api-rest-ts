@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const tracto_1 = require("../controllers/tracto");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.get("/", tracto_1.getItems);
+router.get("/:id", tracto_1.getItem);
+router.post("/", tracto_1.postItem);
+router.put("/:id", tracto_1.updateItem);
+router.delete("/:id", tracto_1.deleteItem);
